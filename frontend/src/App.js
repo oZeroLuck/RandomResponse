@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import {Container, Modal, ModalBody} from "reactstrap";
+import Draggable from 'react-draggable';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [modals, setModals] = useState([]);
+
+    function createModal() {
+        const temp = [];
+        modals.forEach(x => temp.push(x))
+        temp.push('a');
+        setModals(temp);
+    }
+
+    useEffect(() => {
+        console.log("effect", modals);
+    })
+
+    return (
+        <div className="App">
+            <Container>
+                <button type={"button"} onClick={() => createModal()}>Create Modal</button>
+                {modals.length > 0 ? modals.map(modal => {
+                    return (
+                            <Modal isOpen={true} backdrop={false}>
+                                <ModalBody>Hello</ModalBody>
+                            </Modal>
+                    )
+                }) : null
+                }
+            </Container>
+        </div>
+    );
 }
 
 export default App;
