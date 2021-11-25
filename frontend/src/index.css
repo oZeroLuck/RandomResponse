@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
-.modal {
-  display: flex;
+.w-sm {
+  width: 10rem;
+}
+
+.z-999 {
+  z-index: 99999;
 }
