@@ -6,4 +6,5 @@ public interface RandomStatusService {
 
     HttpStatus getRandomStatus();
 
+    HttpStatus[] getMultipleStatus(int number);
 }

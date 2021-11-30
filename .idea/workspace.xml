@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="114f7566-fdbc-4c21-bb97-f7d487ba2d8e" name="Default Changelist" comment="Fixed items closing in cascade type">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/zeroluck/randomresponse/config/WebConfiguration.java" afterDir="false" />
+    <list default="true" id="114f7566-fdbc-4c21-bb97-f7d487ba2d8e" name="Default Changelist" comment="Call services">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/zeroluck/randomresponse/controller/RandomStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/zeroluck/randomresponse/controller/RandomStatusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/zeroluck/randomresponse/service/RandomStatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/zeroluck/randomresponse/service/RandomStatusService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/zeroluck/randomresponse/service/impl/RandomStatusServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/zeroluck/randomresponse/service/impl/RandomStatusServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/component/drag-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/component/drag-modal.js" afterDir="false" />
     </list>
@@ -111,6 +112,7 @@
       <workItem from="1637843116481" duration="11039000" />
       <workItem from="1637868965421" duration="12216000" />
       <workItem from="1637955878798" duration="2552000" />
+      <workItem from="1638311100026" duration="1488000" />
     </task>
     <task id="LOCAL-00001" summary="Moved">
       <created>1637843356920</created>
@@ -140,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637872731570</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Call services">
+      <created>1638311121229</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638311121229</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +173,7 @@
     <MESSAGE value="Added React Frontend" />
     <MESSAGE value="Added close function by id" />
     <MESSAGE value="Fixed items closing in cascade type" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed items closing in cascade type" />
+    <MESSAGE value="Call services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Call services" />
   </component>
 </project>

@@ -14,21 +14,25 @@ function App() {
         console.log("Calling")
         fetch("http://localhost:666/random/response")
             .then((result) => {
-                setModals(generateRandom(result));
-                setCounter(counter + 1);
-                console.log("Finished")
+                result.json().then(json => {
+                    const temp = new Map(modals);
+                    temp.set(counter, generateRandom(json));
+                    setModals(temp);
+                    setCounter(counter + 1);
+                    console.log(json)
+                    }
+                )
             })
 
     }
 
     function generateRandom(status) {
+        console.log(status)
         const top = Math.random()*90 + '%';
         const left = Math.random()*90 + '%';
         const color = getColor();
 
-        const temp = new Map(modals);
-        temp.set(counter, {top: top, left: left, bg: color, message: status});
-        return temp;
+        return  {top: top, left: left, bg: color, message: status};
     }
 
     function closeAll() {
@@ -51,12 +55,22 @@ function App() {
 
     function generateMultiple() {
         if (multiple > 0) {
-            const temp = new Map()
-            for (let i = 0; i < multiple; i++) {
-                const top = Math.random()*90 + '%';
-                const left = Math.random()*90 + '%';
-                const color = getColor();
-            }
+            const max = multiple + counter;
+            const temp = new Map();
+            fetch(`http://localhost:666/random/response/multiple/${multiple}`).then(
+                (response) => {
+                    response.json().then(x => {
+                        console.log(x)
+                        for (let i = counter; i <= max; i++) {
+                            const temp2 = x[i - counter];
+                            temp.set(i, generateRandom(temp2));
+                        }
+                        setModals(new Map([...modals, ...temp]));
+                        setCounter(max - 1);
+                        setMultiple(0);
+                    })
+                }
+            )
         }
         setMultiple(0);
     }

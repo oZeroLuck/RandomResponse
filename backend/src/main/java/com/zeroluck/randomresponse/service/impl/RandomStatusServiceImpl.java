@@ -70,6 +70,15 @@ public class RandomStatusServiceImpl implements RandomStatusService {
 
     }
 
+    @Override
+    public HttpStatus[] getMultipleStatus(int number) {
+        HttpStatus[] outPut = new HttpStatus[number];
+        for (int i = 0; i < number; i++) {
+            outPut[i] = getRandomStatus();
+        }
+        return outPut;
+    }
+
     private int getRandomNumber(int min, int max) {
         final int range = max - min + 1;
         return (int) (Math.random() * range) + min;

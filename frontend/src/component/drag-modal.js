@@ -17,7 +17,7 @@ class DragModal extends React.Component {
                             <button type="button" className={"btn btn-close"} onClick={() => this.callParent()}/>
                     </div>
                     <div className="card-body">
-                        {this.props.message.status}
+                        {this.props.message}
                     </div>
                 </div>
             </Draggable>
